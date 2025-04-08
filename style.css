@@ -24,7 +24,7 @@ body, html {
 .header {
   position: absolute;
   top: -5px;
-  left: 680px;
+  left: 630px;
   display: flex;
   align-items: center;
   gap: 15px;
@@ -136,7 +136,7 @@ body, html {
 .ves-label {
   position: absolute;
   left: 155px;
-  bottom: 575px;
+  bottom: 615px;
   font-size: 20px;
 }
 
@@ -165,7 +165,7 @@ body, html {
 .footer {
   position: absolute;
   right: 30px;
-  bottom: 5px;
+  bottom: 0px;
   font-size: 14px;
 }
 
