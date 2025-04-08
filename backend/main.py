@@ -238,13 +238,13 @@ def generate_image_from_ves():
                 thickness = int(parts[4])
                 circle(obr, S, r, farba, thickness)
 
-            if parts[0] == "GRAYSCALE":
+            if parts[0] == "GREYSCALE":
                 obr = grayscale(obr)
 
-            if parts[0] == "PROTANOPIA":
+            if parts[0] == "COLORBLIND":
                 obr = simulate_protanopia(obr)
 
-            if parts[0] == "INVERZIA":
+            if parts[0] == "INVERTED":
                 obr = invert_colors(obr)
 
             if parts[0] == "BLUR":
