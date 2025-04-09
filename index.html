@@ -5,6 +5,29 @@
     <title>VES Render</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
+  <script src="main.js"></script>
+
+  <script>
+    document.querySelector('.render-btn').addEventListener('click', () => {
+      const code = document.querySelector('.text-area').value;
+  
+      fetch('/render', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ code })
+      })
+      .then(response => response.json())
+      .then(data => {
+        const img = document.querySelector('.center-image');
+        img.src = 'data:image/png;base64,' + data.image;
+      })
+      .catch(error => console.error('Chyba pri renderovaní:', error));
+    });
+  </script>
+  
   <body>
     <div class="desktop">
       <div class="div">
