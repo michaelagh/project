@@ -22,9 +22,8 @@ document.querySelector('.render-btn').addEventListener('click', async () => {
         throw new Error('Nepodarilo sa načítať obrázok');
       }
   
-      const blob = await response.blob();
-      const imgURL = URL.createObjectURL(blob);
-      document.querySelector('.center-image').src = imgURL;
+      const data = await response.json();
+document.querySelector('.center-image').src = 'data:image/png;base64,' + data.image;
     } catch (error) {
       console.error('Chyba pri renderovaní:', error);
     }
